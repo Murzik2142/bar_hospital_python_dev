@@ -1,3 +1,5 @@
+# models.py
+
 class Hospital:
     STATUS_MAP = {
         0: "Тяжело болен",
@@ -16,5 +18,4 @@ class Hospital:
                 raise ValueError("ID не существует.")
             return patient_id - 1
         except ValueError:
-            print("Ошибка: Введите корректный положительный номер ID пациента.")
-            return None
+            raise ValueError("Введите корректный положительный номер ID пациента.")
